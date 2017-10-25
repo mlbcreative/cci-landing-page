@@ -1,0 +1,37 @@
+{
+  "name": "bootstrap4-beta-starter",
+  "version": "1.0.0",
+  "description": "homegrown bootstrap4 starter kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MLB Creative",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "bootstrap": "^4.0.0-beta",
+    "browser-sync": "^2.18.8",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-prompt": "^0.4.1",
+    "gulp-remote-src": "^0.4.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-path": "^0.4.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
+    "tether": "^1.4.0"
+  }
+}
