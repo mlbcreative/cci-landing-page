@@ -23,7 +23,7 @@ var remoteUrl = "";
 
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass', 'vendors:js'], function() {
 
     browserSync.init({
         server: "./src"
@@ -65,13 +65,24 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('vendors:js', function() {
+	
+	var src = [path + 'node_modules/jquery/dist/jquery.js' , path + 'node_modules/popper.js/dist/umd/popper.js', path + 'node_modules/bootstrap/dist/js/bootstrap.js'];
+	
+	gulp.src(src)
+	.pipe(concat('vendors.js'))
+	.pipe(sourcemaps.init())
+	.pipe(sourcemaps.write()) 
+    .pipe(gulp.dest(path + "src/assets/js/"));
+        
+});
+
 gulp.task('js', function() {
 	
-	var src = [path + 'node_modules/jquery/dist/jquery.js', path + 'node_modules/popper.js/dist/umd/popper.js', path + 'node_modules/bootstrap/dist/js/bootstrap.js', path + 'src/assets/js/*.js'];
+	var src = [path + 'src/assets/js/*.js'];
 	
-    return gulp.src(src)
-		.pipe(sourcemaps.write())   
-        .pipe(gulp.dest(path + "src/assets/js/"))
+	gulp.src(src)
+    .pipe(gulp.dest(path + "src/assets/js/"));
         
 });
 
