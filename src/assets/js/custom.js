@@ -25,8 +25,8 @@ $('.cci-card').on('mouseenter', function(){
 
 var total = parseInt($('#campaign-donations').text());
 
-$('#total-funds-amt-header').text("$" + total.toLocaleString());
-$('#total-funds-amt').text(total.toLocaleString());
+$('#total-funds-amt-header').text(total.toLocaleString());
+$('#total-funds-amt').text("$" + total.toLocaleString());
 
 $('.story a').on('click',function(e){
 	e.preventDefault();
