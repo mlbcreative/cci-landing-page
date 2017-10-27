@@ -5,7 +5,7 @@ $yellow: #FFD200;
 $orange: #F08337;
 $gray: #95989A;
 $aqua: #00BE78;
-$ltblue: #038FC4;
+$ltblue: #0069aa;
 
 $font-montserrat: 'Montserrat', sans-serif !important;
 
@@ -182,6 +182,7 @@ body {
 				-webkit-transform: translateY(0);
 				transform: translateY(0);
 				box-shadow: none;
+				padding:2.5rem 0;
 			}
 			
 			
@@ -395,11 +396,11 @@ body {
 				
 				&:nth-child(2) {
 					z-index:3;
-					left:50%;
+					left:49%;
 				}
 				
 				&:nth-child(3) {
-					left:69%;
+					left:68%;
 					z-index:1;
 				}
 				
