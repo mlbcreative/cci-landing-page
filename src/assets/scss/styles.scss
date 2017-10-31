@@ -1,1 +1,577 @@
 
+@import 'bootstrap';
+
+$blue: #1C517D;
+$yellow: #FFD200;
+$orange: #F08337;
+$gray: #95989A;
+$aqua: #00BE78;
+$ltblue: #0069aa;
+
+$font-montserrat: 'Montserrat', sans-serif !important;
+
+#campaign-donations {
+	display: none !important;
+}
+
+.bg-yellow {
+	background-color: $yellow;
+	color:#000;
+}
+
+.bg-white{
+	background-color: $yellow;
+	color:$blue;
+	
+	p {
+		color: gray;
+	}
+}
+
+.bg-blue {
+	background-color: $blue;
+	color:white;
+	
+	h3 {
+		color: $yellow;
+	}
+}
+
+a {
+	text-decoration: none !important;
+	
+	&:link, &:visited {
+		color: $blue;
+	}
+}
+//section
+
+p.section-head {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: .8125rem;
+	text-align:center;
+	font-weight: 600;
+}
+
+
+html,body {
+	min-height: 100%;
+}
+
+
+body {
+	background-color: white;
+	font-family: $font-montserrat;
+	font-size: 0.875rem;
+}
+
+
+//common
+.cci-btn {
+	text-transform: uppercase;
+	font-weight: 600;
+	padding:0.75rem 1rem;
+	background: $yellow;
+	border-radius: 4px;
+	color: $blue;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 100%;
+	padding:100px 0;
+	
+	h3 {
+		font-weight: 600;
+		//color: #000;
+		font-size: 2.25rem
+	}
+	
+}
+
+//navigation
+
+#cci-header {
+	background: white;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.33);
+	position: relative;
+	z-index: 10;
+}
+
+.navbar {
+	.navbar-brand {
+		img {
+			@include media-breakpoint-down(sm) {
+				height:50px;
+				width: auto;
+			}
+		}
+	}
+	
+	.total-funds {
+		display: none;
+		font-size: 1rem;
+		line-height: 1;
+		color:$blue;
+		
+		span {
+			font-size: 1.425rem;
+		}
+		
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+			margin-right: 1rem;
+		}
+		
+	}
+}
+
+//hero
+
+#cci-page-hero {
+	padding:0;
+	display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+	
+	.media-box {
+		flex: 0 0 100%;
+		max-width: 100%;
+		height: 50vh;
+		
+		background: $yellow;
+		background-position: left top;
+		background-size: cover;
+		
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 60%;
+			max-width: 60%;
+			//background-position: center center;
+			height: auto;
+		}
+		
+		
+	}
+	
+	.donate-box {
+		flex: 0 0 100%;
+		max-width: 100%;
+		background: #fafafb;
+		
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 40%;
+			max-width: 40%;
+			background: #fff;
+		}
+		
+		
+		
+		.donate-card {
+			background:#fff;
+			width: 90%;
+			margin:0 auto;
+			-webkit-transform: translateY(-30px);
+			transform: translateY(-30px);
+			box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+			
+			@include media-breakpoint-only(md) {
+				width: 75%;
+			}
+			
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+				max-width: 500px;
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				box-shadow: none;
+				padding:2.5rem 0;
+			}
+			
+			
+			.gadaj-logo {
+				width: 60%;
+				margin:1rem auto;
+				text-align: center;
+			}
+			
+			h2 {
+				text-align: center;
+				font-weight: 600;
+				color: $blue;
+				line-height: 1.2;
+				font-size: 1.875rem
+			}
+			p {
+				font-weight: 400;
+				color: grey;
+				font-size: 1rem;
+				text-align:center;
+			}
+			
+			.divider {
+				width: 100%;
+				position: relative;
+				//padding: 0 .9375rem;
+				text-align: center;
+				
+				div.line {
+					position: absolute;
+					top: 50%;
+					width: 100%;
+					height: 2px;
+					margin-top: -1px;
+					background: #0069aa;
+				}
+				
+				span {
+					display: inline-block;
+					background: #fff;
+					padding: .4375rem .9375rem;
+					position: relative;
+					font-weight: 600;
+					color: #1c517d;
+				}
+				
+			}
+			
+			.give-amts {
+				.give {
+					margin-bottom: 2rem;
+				}
+						
+			}
+			
+			.bottom-border {
+				margin-top:2rem;
+				hr {
+					height: 1px;
+					background-color: $blue;
+				}	
+			}
+			
+			.total-funds {
+				font-weight: 600;
+				color: $ltblue;
+				font-size: .8125rem;
+				sup {
+					top: -0.75em;
+					font-size: 1.5rem;
+					padding-right:6px;
+				}
+				
+				span {
+					font-size: 3.375rem;
+					line-height: 1;
+					color: $ltblue;
+				}
+			}
+			
+		}
+		
+	}
+	
+}
+
+#support {
+	.support-examples {
+		margin-top:2rem;
+		
+		p {
+			margin-top: 1.5rem;
+			span {
+				font-size: 1.25rem;
+				font-weight: 700;
+			}
+		}
+		
+	}
+}
+
+#stories {
+	
+	.stories {
+		margin-top: 2rem;
+		
+		.story {
+			
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 1.5rem;
+			}
+			
+			
+			> div {
+				background:#e5e5e6;
+				border-radius: 3px;
+				padding:1rem 2rem;
+				box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+				
+				
+				p.story-names {
+					font-size: 1rem;
+					font-weight: 600;
+				}
+				
+				
+				
+				a {
+					display: inline-block;
+					margin:1rem auto 0;
+					width: auto;
+				}
+				
+			}
+		}
+		
+	}
+	
+}
+
+#training {
+	
+	h3 {
+		color: $yellow;
+	}
+	
+	a.cci-btn {
+		margin-top:1rem;
+		display: inline-block;
+	}
+	
+	.jobs {
+		
+		
+		@include media-breakpoint-down(md) {
+			margin-top:2rem;
+		}
+		
+		.job {
+			h4 {
+				margin-top: 1.5rem;
+				font-size: 1.125rem;
+			}
+		}
+	}
+}
+
+#impact {
+	
+	.card-wrapper {
+		width: 1140px;
+		max-width: 100%;
+		position: relative;
+		margin:0 auto;
+		@include media-breakpoint-up(md) {
+			height: 100px;
+			max-height: 100px;
+			margin-top: 40px;
+		}
+		
+		.cci-card {
+			background: $yellow;
+			color: $ltblue;
+			border-radius:3px;
+			padding:1rem 2rem;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+			cursor: pointer;
+			
+			@include media-breakpoint-down(sm) {
+				width: 85%;
+				margin: 0 auto 1.5rem;
+				
+			}
+			
+			
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top:0;
+				width: 250px;
+				height:300px;
+				-webkit-transform: scale(0.9) translateX(-50%);
+				transform: scale(0.9) translateX(-50%);
+				-webkit-transition: transform 250ms ease-in-out;
+				transition: transform 250ms ease-in-out;
+				
+				&:nth-child(1) {
+					left:30%;
+					z-index:2;
+				}
+				
+				&:nth-child(2) {
+					z-index:3;
+					left:49%;
+				}
+				
+				&:nth-child(3) {
+					left:68%;
+					z-index:1;
+				}
+				
+				&.scaled {
+					-webkit-transform: scale(1) translateX(-50%);
+					transform: scale(1) translateX(-50%);
+					color: $blue;
+					z-index: 7;
+				}
+				
+			}
+			
+			
+			.pct{
+				font-size: 4rem;
+				font-weight: 800;
+				width: 70%;
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+			}
+			
+			p {
+				text-align: center;
+				color: inherit;
+				font-size: 1rem;
+			}
+			
+			
+			
+		}
+	}
+	
+}
+#participate {
+	
+	@include media-breakpoint-up(md) {
+		padding-top: 150px;
+	}
+	
+	.help {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		h4 {
+			margin-top:1.5rem;
+			color: $yellow;
+			width: auto;
+		}
+		
+		p {
+			margin-bottom: 2rem;
+			width: auto;
+			padding:0 2rem;
+		}
+		a.buttton.outline {
+			border:2px solid #fff;
+			color: #fff;
+			padding:0.5rem 1rem;
+			text-transform: uppercase;
+		}
+			
+	}
+}
+#partners {
+	.logos {
+		margin-bottom: 4rem;
+		> div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	
+	p.donate {
+		font-size: 1.125rem;
+		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	a {
+		display: inline-block;
+	}
+}
+
+//MODAL
+
+.modal {
+	background: $yellow;
+}
+.modal-title {
+	margin-left: 2rem;
+	color: $blue;
+}
+
+.modal-body {
+	
+	figure {
+		margin:0 auto 1rem;
+		text-align: center;
+		
+		figcaption {
+			font-size: 11px;
+			opacity: 0.5;
+		}
+	}
+	
+	p {
+		margin:0 auto 1rem;
+		max-width: 400px;
+		line-height: 1.4;
+		font-size: 0.875rem;
+	}
+	
+}
+
+//FOOTER
+
+footer {
+	background-color: #f3f3f3;
+	color: #232323;
+	padding: 30px 0; 
+	a {
+		color: inherit;
+		&.first-level {
+			font-weight: 700;
+		}
+	}
+	
+	ul {
+		line-height: 2em;
+		list-style: none;
+		padding-left: 0;
+		li {
+			padding-left: 15px;
+			background: url('http://cci.org/assets/images/lists/blue-list-dot.png') 5px center no-repeat;
+			a {
+				font-size: 12px;
+				font-weight: 400;
+				color: $blue;
+			}
+		}
+	}
+	
+	.footer-follow-us-links {
+		width: 215px;
+		height: 75px;
+		padding-top: 50px;
+		background: url('http://cci.org/assets/images/follow-us-icons/follow-us-bg.png') no-repeat 24px top;
+	}
+	
+	.legal {
+		padding:15px;
+		border-top:1px solid #ccc;
+		font-size:13px;
+		font-weight: 300;
+		
+		span {
+			display: inline-block;
+			padding: 0px 15px;
+			border-left: 1px solid #d3d3d3;
+			a {
+				color: $ltblue;
+			}
+		}
+	}
+	
+}
