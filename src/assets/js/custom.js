@@ -26,7 +26,7 @@ $('.cci-card').on('mouseenter', function(){
 var total = $('#campaign-donations').text();
 
 //var total = $('#total-funds-total').text();
-if(total != "0") {
+if(total != "0" && total.length > 0) {
 	total = total.slice(0,-2);
 	total = parseInt(total);
 
@@ -35,8 +35,8 @@ if(total != "0") {
 	
 } else if(total == "0") {
 	$('#total-funds-amt').empty().text(total);
-	$('#total-funds-amt-header').empty().text(total);
+	$('#total-funds-amt-header').empty().text("$" + total);
 } else {
 	$('#total-funds-amt').empty().text("0");
-	$('#total-funds-amt-header').empty().text("0");
+	$('#total-funds-amt-header').empty().text("$0");
 }
