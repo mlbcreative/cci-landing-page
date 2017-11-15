@@ -149,7 +149,7 @@ body {
 		@include media-breakpoint-up(lg) {
 			flex: 0 0 60%;
 			max-width: 60%;
-			//background-position: center center;
+			background-position: 100% 0;
 			height: auto;
 		}
 		
@@ -296,6 +296,9 @@ body {
 		margin-top: 2rem;
 		
 		.story {
+			perspective: 500;
+			-webkit-perspective: 500;
+			-ms-perspective: 500;
 			
 			@include media-breakpoint-down(sm) {
 				margin-bottom: 1.5rem;
@@ -303,11 +306,14 @@ body {
 			
 			
 			> div {
+				backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
 				background:#e5e5e6;
 				border-radius: 3px;
 				padding:1rem 2rem;
 				box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-				
+				-webkit-transition: transform 300ms ease-in-out;
+				transition: transform 300ms ease-in-out;
 				
 				p.story-names {
 					font-size: 1rem;
@@ -322,6 +328,17 @@ body {
 					width: auto;
 				}
 				
+			}
+			
+			//hover
+			
+			&:not(.touchable) {
+				&:hover {
+					> div {
+						-webkit-transform: rotate3d(1, 0, 0, 5deg) translate3d(0,0,50px);
+						transform: rotate3d(1, 0, 0, 5deg) translate3d(0,0,50px);
+					}
+				}
 			}
 		}
 		
