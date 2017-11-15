@@ -7,6 +7,8 @@ window.addEventListener('touchstart', function onFirstTouch() {
 	
 	touchable = true;
 	
+	$('.story').addClass('touchable');
+	
 	window.removeEventListener('touchstart', onFirstTouch, false);
 }, false);
 
