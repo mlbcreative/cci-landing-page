@@ -1,8 +1,8 @@
 {
-  "name": "bootstrap4-beta-starter",
+  "name": "Canine Companions Landing Page Start",
   "version": "1.0.0",
-  "description": "homegrown bootstrap4 starter kit",
-  "main": "index.js",
+  "description": "Canine Companions Landing Page Start",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
