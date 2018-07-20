@@ -170,9 +170,9 @@ gulp.task('html:remote', ['remotePrompt'], function(){
 })
 
 gulp.task('images', function(){
-	gulp.src(path + "src/assets/img/*")
-	.pipe(imagemin())
-	.pipe(gulp.dest(path + "dist/assets/img/"))
+	gulp.src(path + "src/assets/img/**")
+	//.pipe(imagemin())
+	.pipe(gulp.dest(path + "dist/assets/img"))
 })
 
 gulp.task('build' , gulpSequence('clean', ['build:scss', 'build:js'], 'build:html', 'images'));
