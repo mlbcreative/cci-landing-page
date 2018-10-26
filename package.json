@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Canine Companions Landing Page Start",
   "main": "index.html",
+  "repository: "https://github.com/mlbcreative/cci-landing-page-template.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
